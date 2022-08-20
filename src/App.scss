@@ -1,0 +1,14 @@
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+$black: #000;
+$black-light: #3E3E3E;
+$filterBack: #EBEBEB;
+$filterStrock: #A9A9A9;
+$listStrock: #C1C1C1;
+$verbBack: #F8F8F8;
+@import './styles/Header.scss';
+@import './styles/Main.scss';

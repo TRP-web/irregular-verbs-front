@@ -1,0 +1,60 @@
+h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.verbs {
+    padding-top: 50px;
+
+    &__inner {
+        padding: 0 75px;
+    }
+
+    &__filter {
+        border: 1px solid $filterStrock;
+        background-color: $filterBack;
+        height: 50px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.list-verbs {
+    border-radius: 4px;
+    border: 1px solid $listStrock;
+    min-height: 60vh;
+    padding-top: 11px;
+}
+
+.verb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    background-color: $verbBack;
+    padding: 0 10px;
+    margin: 0 7px;
+
+    &+& {
+        margin-top: 7px;
+    }
+
+    span {
+        width: 16.6%;
+        color: $black-light;
+        font-size: 20px;
+    }
+
+    &__verb {
+        font-weight: 700;
+        span {
+            margin-right: 15px;
+            font-size: 16px;
+        }
+    }
+    &__remove{
+        cursor: pointer;
+    }
+}
