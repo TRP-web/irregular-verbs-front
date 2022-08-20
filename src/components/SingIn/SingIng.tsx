@@ -1,4 +1,5 @@
 import { GoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import React from 'react'
 import "./SingIn.scss"
@@ -12,8 +13,14 @@ const SingIn: React.FC = () => {
     const [decodInfo, setDecodInfo] = React.useState<IdecodGoogle | null>(null)
     const [show, setShow] = React.useState<boolean>(true)
 
-    const anonimFunction = (res: any) => {
+    React.useEffect(() => {
+
+    }, [])
+
+    const registrationSuccess = (res: any) => {
         const decodeResult: IdecodGoogle = jwtDecode(res.credential)
+        axios.post("http://localhost:22008/user/registration", { token: res.credential })
+            .then(res => console.log(res.data))
         setDecodInfo(decodeResult)
     }
 
@@ -30,7 +37,7 @@ const SingIn: React.FC = () => {
                     <div className='registration'>
                         <div className="registration__inner">
                             <GoogleLogin
-                                onSuccess={anonimFunction}
+                                onSuccess={registrationSuccess}
                                 onError={() => {
                                     console.log('Login Failed');
                                 }}
@@ -41,7 +48,7 @@ const SingIn: React.FC = () => {
                                         <span>Hellow {decodInfo.name} !</span>
                                         <div>Welcome to home XD</div>
                                     </div>
-                                    
+
                                     : null
                             }
                             <button
