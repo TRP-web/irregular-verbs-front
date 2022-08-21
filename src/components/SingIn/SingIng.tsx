@@ -1,6 +1,5 @@
 import { GoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
-import jwtDecode from 'jwt-decode';
 import React from 'react'
 import "./SingIn.scss"
 
@@ -20,7 +19,7 @@ const SingIn: React.FC = () => {
     const registrationSuccess = (res: any) => {
         // const decodeResult: IdecodGoogle = jwtDecode(res.credential)
         axios.post("http://localhost:22008/user/registration", { token: res.credential })
-            .then(res => setDecodInfo(res.data))
+            .then(res => { setDecodInfo(res.data); console.log(res.data)})
     }
 
     const returnMassage = (decodInfo: IdecodGoogle | null): string => {
