@@ -18,10 +18,9 @@ const SingIn: React.FC = () => {
     }, [])
 
     const registrationSuccess = (res: any) => {
-        const decodeResult: IdecodGoogle = jwtDecode(res.credential)
+        // const decodeResult: IdecodGoogle = jwtDecode(res.credential)
         axios.post("http://localhost:22008/user/registration", { token: res.credential })
-            .then(res => console.log(res.data))
-        setDecodInfo(decodeResult)
+            .then(res => setDecodInfo(res.data))
     }
 
     const returnMassage = (decodInfo: IdecodGoogle | null): string => {
