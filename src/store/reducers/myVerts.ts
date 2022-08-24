@@ -6,14 +6,7 @@ interface IInitialState {
 }
 
 const initialState: IInitialState = {
-    verbs: [
-        {
-            id: 1, verb: "be", v2: "was/were", v3: "been", translated: "быть"
-        },
-        {
-            id: 2, verb: "go", v2: "went", v3: "gone", translated: "передвигаться, ходить, авыафыа, вадфыаоффыав, одфываофды,"
-        }
-    ]
+    verbs: []
 }
 
 
@@ -21,9 +14,9 @@ export const vertSlice = createSlice({
     name: "myverb",
     initialState,
     reducers: {
-        remove(state, action: PayloadAction<number>) {
+        remove(state, action: PayloadAction<string>) {
             const result = current(state.verbs).filter((verb) => {
-                if (verb.id === action.payload) {
+                if (verb._id === action.payload) {
                     return false // удалить
                 } else return true // оставить
             })
@@ -31,7 +24,7 @@ export const vertSlice = createSlice({
         },
         addRandom(state) {
             state.verbs.push({
-                id: Math.random(),
+                _id: String(Math.random()),
                 translated: `${Math.random()}`,
                 v2: `${Math.random()}`,
                 v3: `${Math.random()}`,

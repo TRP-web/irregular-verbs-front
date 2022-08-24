@@ -22,7 +22,7 @@ const Verb: React.FC<IVerpProp> = ({ verb, index }) => {
                 src={`${window.location.origin}/img/delete.svg`}
                 alt="del"
                 className='verb__remove'
-                onClick={() => dispatch(remove(verb.id))}
+                onClick={() => dispatch(remove(verb._id))}
             />
         </div>
     )

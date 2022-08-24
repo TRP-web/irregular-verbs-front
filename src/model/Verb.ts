@@ -1,5 +1,5 @@
 export interface IVerb {
-    id: number
+    _id: string
     verb: string
     v2: string
     v3: string

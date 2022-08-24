@@ -1,4 +1,4 @@
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleLogin, googleLogout, useGoogleOneTapLogin } from '@react-oauth/google';
 import axios from 'axios';
 import React from 'react'
 import { apiUrls, backUrl } from '../../urls/urls';
@@ -16,17 +16,16 @@ const SingIn: React.FC = () => {
     React.useEffect(() => {
 
     }, [])
+    // useGoogleOneTapLogin({
+    //     onSuccess: credentialResponse => {
+    //         console.log(credentialResponse);
+    //     },
 
+    // })
     const registrationSuccess = (res: any) => {
         const url = `${backUrl}${apiUrls.login}`
         axios.post(url, { token: res.credential }, { headers: { token: res.credential } })
             .then(res => { setDecodInfo(res.data); console.log(res.data) })
-    }
-
-    const returnMassage = (decodInfo: IdecodGoogle | null): string => {
-        if (decodInfo) {
-            return "Continue"
-        } else return "Continue without registration"
     }
 
     return (
@@ -35,24 +34,23 @@ const SingIn: React.FC = () => {
                 show ?
                     <div className='registration'>
                         <div className="registration__inner">
-                            <GoogleLogin
-                                onSuccess={registrationSuccess}
-                                onError={() => {
-                                    console.log('Login Failed');
-                                }}
-                            />
-                            {
-                                decodInfo !== null ?
-                                    <div>
-                                        <span>Hellow {decodInfo.name} !</span>
-                                        <div>Welcome to home XD</div>
-                                    </div>
+                            <h2>Login/Registration</h2>
+                            <p> <strong>Click</strong> on the button at the bottom for login or registration in application</p>
+                            <div className="registration__google-inner">
+                                <GoogleLogin
+                                    onSuccess={registrationSuccess}
+                                    onError={() => {
+                                        console.log('Login Failed');
+                                    }}
+                                    size={'large'}
+                                    theme={'filled_blue'}
+                                    type={'standard'}
+                                    width={"540px"}
+                                    useOneTap
+                                />
 
-                                    : null
-                            }
-                            <button
-                                onClick={() => setShow(!show)}
-                            >{returnMassage(decodInfo)}</button>
+                            </div>
+
                         </div>
                     </div>
                     : null
