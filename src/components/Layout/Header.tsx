@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { useAppSelector } from '../../store/hooks/redux'
 const Header: React.FC = () => {
+
+    const picture = useAppSelector(state => state.userReducer.user.picture)
+    const load = useAppSelector(state => state.userReducer.load)
 
     return (
         <header className='header'>
@@ -26,7 +30,9 @@ const Header: React.FC = () => {
                     <img src={window.location.origin + "/img/logos.svg"} alt="logo" />
                 </div>
                 <div className="profil">
-                    <img src={window.location.origin + "/img/profil.svg"} alt="icon" />
+                    <img src={
+                        load ? picture : `${window.location.origin}/img/Profil.svg`
+                    } alt="icon" />
                 </div>
             </div>
         </header>

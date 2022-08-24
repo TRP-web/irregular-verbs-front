@@ -31,5 +31,14 @@
     .profil{
         margin-right: 18px;
         cursor: pointer;
+        border-radius: 25px;
+        width: 50px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 100%;
+            display: block;
+        }
     }
 }

@@ -4,6 +4,7 @@ import { IUser } from "../../model/User"
 interface IInitialState {
     user: IUser
     load: boolean
+    token: string
 }
 const initialState: IInitialState = {
     user: {
@@ -12,19 +13,23 @@ const initialState: IInitialState = {
         picture: "null",
         name: "null",
     },
+    token: "",
     load: false
 }
 
-const userSlice = createSlice({
+export const userSlice = createSlice({
     name: "user slise",
     initialState,
     reducers: {
-        add(state, action: PayloadAction<IUser>) {
+        addToken(state, action: PayloadAction<string>){
+            state.token = action.payload
+        },
+        addUser(state, action: PayloadAction<IUser>) {
             state.user = action.payload
         },
         chengeLoad(state, action: PayloadAction<boolean>) {
             state.load = action.payload
-        }
+        },
     }
 })
 

@@ -1,21 +1,19 @@
 import { GoogleLogin, googleLogout, useGoogleOneTapLogin } from '@react-oauth/google';
 import axios from 'axios';
 import React from 'react'
+import { IUser } from '../../model/User';
+import { useAppDispatch, useAppSelector } from '../../store/hooks/redux';
+import { userSlice } from '../../store/reducers/user';
 import { apiUrls, backUrl } from '../../urls/urls';
 import "./SingIn.scss"
 
 const SingIn: React.FC = () => {
-    interface IdecodGoogle {
-        name: string
-        email: string
-        picture: string
-    }
-    const [decodInfo, setDecodInfo] = React.useState<IdecodGoogle | null>(null)
-    const [show, setShow] = React.useState<boolean>(true)
+    const { load, user, token } = useAppSelector(state => state.userReducer)
+    const dispatch = useAppDispatch()
+    const { addUser, chengeLoad, addToken } = userSlice.actions
 
-    React.useEffect(() => {
+    console.log(user, token);
 
-    }, [])
     // useGoogleOneTapLogin({
     //     onSuccess: credentialResponse => {
     //         console.log(credentialResponse);
@@ -23,15 +21,22 @@ const SingIn: React.FC = () => {
 
     // })
     const registrationSuccess = (res: any) => {
+        const token = res.credential
         const url = `${backUrl}${apiUrls.login}`
-        axios.post(url, { token: res.credential }, { headers: { token: res.credential } })
-            .then(res => { setDecodInfo(res.data); console.log(res.data) })
+        axios.post<IUser>(url, { token: token }, { headers: { token: token } })
+            .then(res => {
+                const { _id, email, name, picture } = res.data
+                const userData: IUser = { _id, email, name, picture }
+                dispatch(addToken(token))
+                dispatch(addUser(userData))
+                dispatch(chengeLoad(true))
+            })
     }
 
     return (
         <>
             {
-                show ?
+                !load ?
                     <div className='registration'>
                         <div className="registration__inner">
                             <h2>Login/Registration</h2>
