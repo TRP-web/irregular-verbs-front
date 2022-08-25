@@ -4,7 +4,6 @@ import { useAppSelector } from '../../store/hooks/redux'
 const Header: React.FC = () => {
 
     const picture = useAppSelector(state => state.userReducer.user.picture)
-    const load = useAppSelector(state => state.userReducer.load)
 
     return (
         <header className='header'>
@@ -31,7 +30,7 @@ const Header: React.FC = () => {
                 </div>
                 <div className="profil">
                     <img src={
-                        load ? picture : `${window.location.origin}/img/Profil.svg`
+                        picture !== null ? picture : `${window.location.origin}/img/Profil.svg`
                     } alt="icon" />
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import { GoogleLogin, googleLogout, useGoogleOneTapLogin } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import React from 'react'
 import { IUser } from '../../model/User';
@@ -8,7 +8,7 @@ import { apiUrls, backUrl } from '../../urls/urls';
 import "./SingIn.scss"
 
 const SingIn: React.FC = () => {
-    const { load, user, token } = useAppSelector(state => state.userReducer)
+    const { user, token, load } = useAppSelector(state => state.userReducer)
     const dispatch = useAppDispatch()
     const { addUser, chengeLoad, addToken } = userSlice.actions
 

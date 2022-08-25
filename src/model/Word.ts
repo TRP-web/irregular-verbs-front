@@ -1,6 +1,6 @@
-export interface IVerb {
+export interface IWord {
     _id: string
-    verb: string
+    word: string
     v2: string
     v3: string
     translated: string

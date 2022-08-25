@@ -2,18 +2,18 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { IUser } from "../../model/User"
 
 interface IInitialState {
-    user: IUser
-    load: boolean
-    token: string
+    user: IUser 
+    load: boolean 
+    token: string | null
 }
 const initialState: IInitialState = {
     user: {
-        _id: "null",
-        email: "null",
-        picture: "null",
-        name: "null",
+        _id: null,
+        email: null,
+        picture: null,
+        name: null,
     },
-    token: "",
+    token: null,
     load: false
 }
 
