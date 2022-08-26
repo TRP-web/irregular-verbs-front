@@ -1,16 +1,16 @@
 import React from 'react'
 import AddWordButton from './AddWordButton'
 
-import SortVerbs from './SortVerbs'
+import SortWord from './SortWords'
 
-const MyVerbs: React.FC = () => {
+const MyWords: React.FC = () => {
 
     return (
         <>
             <h2>My Verbs</h2>
-            <SortVerbs />
+            <SortWord />
             <AddWordButton />
         </>
     )
 }
-export default MyVerbs
+export default MyWords

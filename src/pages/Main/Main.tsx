@@ -1,5 +1,5 @@
 import React from 'react'
-import MyVerbs from './MyVerbs'
+import MyVerbs from './MyWord'
 
 const Main: React.FC = () => {
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import ListVerbs from './ListVerbs'
+import ListWords from './ListWords'
 
-const SortVerbs: React.FC = () => {
+const SortWords: React.FC = () => {
 
     return (
         <div className='verbs__inner'>
@@ -9,8 +9,8 @@ const SortVerbs: React.FC = () => {
                 filtering and sorting
             </div>
             {/* ..... */}
-            <ListVerbs />
+            <ListWords />
         </div>
     )
 }
-export default SortVerbs
+export default SortWords

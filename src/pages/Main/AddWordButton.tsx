@@ -2,20 +2,21 @@ import axios from 'axios'
 import React from 'react'
 import { IWord } from '../../model/Word'
 import { useAppDispatch, useAppSelector } from '../../store/hooks/redux'
-import { wordSlice } from '../../store/reducers/myVerts'
+import { wordSlice } from '../../store/reducers/myWord'
+import { fetchWords } from '../../store/reducers/wordsAction'
 import { apiUrls, backUrl } from '../../urls/urls'
 
 const AddWordButton: React.FC = () => {
     const { token } = useAppSelector(state => state.userReducer)
     const dispatch = useAppDispatch()
-    const { addRandom, addAllWord } = wordSlice.actions
+    const { addRandom } = wordSlice.actions
 
     const addWordHandler = () => {
         const newWord = {
             translated: `${Math.random()}`,
             v2: `${Math.random()}`,
             v3: `${Math.random()}`,
-            verb: `${Math.random()}`
+            word: `${Math.random()}`
         }
         const url = `${backUrl}${apiUrls.addWord}`
         if (token !== null) {
@@ -30,13 +31,8 @@ const AddWordButton: React.FC = () => {
     }
 
     React.useEffect(() => {
-        const url = `${backUrl}${apiUrls.getWords}`
         if (token !== null) {
-            axios.get<IWord[]>(url, { headers: { token: token } })
-                .then(res => {
-                    const result = res.data
-                    dispatch(addAllWord(result))
-                })
+            dispatch(fetchWords(token))
         } else console.log("token is null");
     }, [token])
     return (

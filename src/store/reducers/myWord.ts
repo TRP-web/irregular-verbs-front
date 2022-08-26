@@ -1,12 +1,15 @@
 import { createSlice, current, PayloadAction } from "@reduxjs/toolkit";
 import { IWord } from "../../model/Word";
+import { fetchWords } from "./wordsAction";
 
 interface IInitialState {
     words: IWord[]
+    loading: boolean
 }
 
 const initialState: IInitialState = {
-    words: []
+    words: [],
+    loading: false
 }
 
 export const wordSlice = createSlice({
@@ -24,8 +27,15 @@ export const wordSlice = createSlice({
         addRandom(state, action: PayloadAction<IWord>) {
             state.words.push(action.payload)
         },
-        addAllWord(state, action: PayloadAction<IWord[]>) {
+    },
+    extraReducers: {
+        [fetchWords.fulfilled.type]: (state, action: PayloadAction<IWord[]>) => {
+            console.log(action.payload)
             state.words = action.payload
+            state.loading = false
+        },
+        [fetchWords.pending.type]: (state) => {
+            state.loading = true
         }
     }
 })

@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import vertReducer from "./reducers/myVerts"
+import vertReducer from "./reducers/myWord"
 import userReducer from "./reducers/user"
 const rootReducer = combineReducers({
     vertReducer,
