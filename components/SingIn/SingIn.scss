@@ -1,0 +1,26 @@
+.registration {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__inner{
+        width: 460px;
+        height: 250px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        p{
+            font-size: 20px;
+        }
+    }
+    &__google-inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+

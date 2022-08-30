@@ -4,7 +4,7 @@ import axios from 'axios';
 import { ITranslateData, ITranslations } from './model/translator';
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from './components/Layout/Header';
-import Main from './pages/Main/Main';
+import Main from './components/pages/Main/Main';
 import SingIn from './components/SingIn/SingIng';
 const App: React.FC = () => {
   // const [dataTranslate, setDataTranslate] = React.useState<ITranslations>({ text: "", to: "en" })
