@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import { setupStore } from "../store/store";
+import { setupStore, wrapper } from "../store/store";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import React from "react";
 import "../index.scss"
@@ -14,4 +14,4 @@ const App = ({ Component, pageProps }) => {
     )
 }
 
-export default App
+ export default wrapper.withRedux(App);

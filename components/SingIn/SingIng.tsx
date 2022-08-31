@@ -4,7 +4,11 @@ import React from 'react'
 import { IUser } from '../../model/User';
 import { useAppDispatch, useAppSelector } from '../../store/hooks/redux';
 import { userSlice } from '../../store/reducers/user';
+import { wrapper } from '../../store/store';
 import { apiUrls, backUrl } from '../../urls/urls';
+const { addUser, chengeLoad, addToken } = userSlice.actions
+
+
 
 const SingIn: React.FC = () => {
     const { user, token, load } = useAppSelector(state => state.userReducer)
@@ -64,4 +68,7 @@ const SingIn: React.FC = () => {
 
     )
 }
+
+
+
 export default SingIn

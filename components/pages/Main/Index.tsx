@@ -6,6 +6,7 @@ import axios from 'axios';
 import SingIn from "../../SingIn/SingIng"
 import Header from "../../Layout/Header"
 import MyWords from './MyWord';
+import { wrapper } from '../../../store/store';
 
 const App: React.FC = () => {
   // const [dataTranslate, setDataTranslate] = React.useState<ITranslations>({ text: "", to: "en" })

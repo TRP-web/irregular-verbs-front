@@ -1,5 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
+import { Provider } from "react-redux";
+import { setupStore } from "../store/store";
 
 export default class AppDocument extends Document {
     render() {
@@ -9,8 +11,11 @@ export default class AppDocument extends Document {
 
                 </Head>
                 <body>
-                    <Main/>
+                    {/* <Provider store={setupStore()}> */}
+                        <Main />
+                    {/* </Provider> */}
                     <NextScript />
+
                 </body>
             </Html>
         )
