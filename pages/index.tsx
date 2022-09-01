@@ -6,13 +6,16 @@ import { wrapper } from "../store/store";
 
 export const getServerSideProps = wrapper.getServerSideProps((store) =>
   async ({ params }) => {
-    const {chengeLoad} = userSlice.actions
-    // we can set the initial state from here
-    // we are setting to false but you can run your custom logic here
-    // await store.dispatch(addToken("test token"))
-    // await store.dispatch(addUser("test data"))
-    await store.dispatch(chengeLoad(true))
-    console.log(store, "testsfsd");
+    // const {chengeLoad} = userSlice.actions
+    // // we can set the initial state from here
+    // // we are setting to false but you can run your custom logic here
+    // // await store.dispatch(addToken("test token"))
+    // // await store.dispatch(addUser("test data"))
+    // console.log(store.getState());
+    // console.log("test message");
+    
+    // await store.dispatch(chengeLoad(true))
+    // // console.log(store, "testsfsd");
 
     // console.log("State on server", store.getState());
     return {

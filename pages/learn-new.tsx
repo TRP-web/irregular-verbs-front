@@ -1,14 +1,7 @@
 import React from 'react'
-import { useAppSelector } from '../store/hooks/redux'
+import LearnNew from '../components/pages/LearnNew/LearnNew'
 
-const LearnNew: React.FC = () => {
-    const testState = useAppSelector(state => state.userReducer.token)
-    console.log(testState);
-    
-    return (
-        <>
-            test learn new page
-        </>
-    )
+const LearnNewPage: React.FC = () => {
+    return <LearnNew />
 }
-export default LearnNew
+export default LearnNewPage
