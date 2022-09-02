@@ -5,7 +5,7 @@ import WordsInner from './WordsInner'
 
 const WordWrapper: React.FC = () => {
 
-    const [activeList, setActiveList] = React.useState<IActiveList>("recomended")
+    const [activeList, setActiveList] = React.useState<IActiveList>("recommended")
 
     return (
         <>
@@ -13,7 +13,7 @@ const WordWrapper: React.FC = () => {
                 <nav className="learn-new__menu">
                     <ul>
                         <MenuElem
-                            name='recomended'
+                            name='recommended'
                             active={activeList}
                             setActiveList={setActiveList}
                         >Recomended</MenuElem>

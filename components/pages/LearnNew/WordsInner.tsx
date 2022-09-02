@@ -1,15 +1,39 @@
 import React from 'react'
 import { IActiveList } from '../../../model/activeList'
+import { useAppDispatch, useAppSelector } from '../../../store/hooks/redux'
+import { fetchNewWords } from '../../../store/reducers/newWordsAction'
+import Loading from '../../Loading/Loading'
 
 interface IWordsInnerProps {
     active: IActiveList
 }
 
-const WordsInner: React.FC<IWordsInnerProps> = () => {
+const WordsInner: React.FC<IWordsInnerProps> = ({ active }) => {
+    const { loading, newWords } = useAppSelector(state => state.newWordsReducer)
+    const token = useAppSelector(state => state.userReducer.token)
+    const dispatch = useAppDispatch()
+    React.useEffect(() => {
+        if (token !== null) {
+            dispatch(fetchNewWords({ active: active, token: token }))
+        } else console.log("token is null");
+
+    }, [active])
 
     return (
         <div className="learn-new__words">
-            some words blocks
+            {
+                loading
+                    ?
+                    <Loading fontSize={"32px"} />
+                    :
+                    newWords.map((newWord, index) => {
+                        return (
+                            <div className="new word" key={index}>
+                                {newWord.word} {newWord.translated}
+                            </div>
+                        )
+                    })
+            }
         </div>
     )
 }

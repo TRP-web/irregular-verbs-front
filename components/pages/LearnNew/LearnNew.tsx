@@ -7,7 +7,7 @@ const LearnNew: React.FC = () => {
     return (
         <Header>
             <div className="learn-new">
-                <h2>Start to learn a new word</h2>
+                <h2>Choose a word to learn</h2>
                 <WordWrapper />
             </div>
         </Header>

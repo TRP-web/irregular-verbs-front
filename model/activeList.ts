@@ -1,1 +1,1 @@
-export type IActiveList = "recomended" | "top20"
+export type IActiveList = "recommended" | "top20"
