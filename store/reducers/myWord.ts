@@ -24,7 +24,7 @@ export const wordSlice = createSlice({
             })
             state.words = result
         },
-        addRandom(state, action: PayloadAction<IWord>) {
+        add(state, action: PayloadAction<IWord>) {
             state.words.push(action.payload)
         },
     },

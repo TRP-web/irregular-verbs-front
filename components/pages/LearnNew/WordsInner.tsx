@@ -3,6 +3,7 @@ import { IActiveList } from '../../../model/activeList'
 import { useAppDispatch, useAppSelector } from '../../../store/hooks/redux'
 import { fetchNewWords } from '../../../store/reducers/newWordsAction'
 import Loading from '../../Loading/Loading'
+import NewWord from './newWord'
 
 interface IWordsInnerProps {
     active: IActiveList
@@ -28,9 +29,7 @@ const WordsInner: React.FC<IWordsInnerProps> = ({ active }) => {
                     :
                     newWords.map((newWord, index) => {
                         return (
-                            <div className="new word" key={index}>
-                                {newWord.word} {newWord.translated}
-                            </div>
+                            <NewWord newWord={newWord} index={index} key={index} />
                         )
                     })
             }

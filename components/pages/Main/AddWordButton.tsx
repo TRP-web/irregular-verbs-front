@@ -8,9 +8,9 @@ import { apiUrls, backUrl } from '../../../urls/urls'
 
 
 const AddWordButton: React.FC = () => {
-    const { token } = useAppSelector(state => state.userReducer)
+    const { token } = useAppSelector(state => state.userReducer )
     const dispatch = useAppDispatch()
-    const { addRandom } = wordSlice.actions
+    // const { addRandom } = wordSlice.actions
 
     const addWordHandler = () => {
         const newWord = {
@@ -26,7 +26,7 @@ const AddWordButton: React.FC = () => {
                     headers: { token: token }
                 }
             ).then(res => {
-                dispatch(addRandom(res.data))
+                // dispatch(addRandom(res.data))
             })
         } else console.log("token is null");
     }

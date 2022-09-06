@@ -26,7 +26,7 @@ const WordWrapper: React.FC = () => {
                         </MenuElem>
                     </ul>
                 </nav>
-                <div className="lern-new__content-inner">
+                <div className="learn-new__content-inner">
                     <div className="learn-new__filter">
                         i am future filter
                     </div>

@@ -9,7 +9,7 @@ const MyWords: React.FC = () => {
         <>
             <h2>My Verbs</h2>
             <SortWord />
-            <AddWordButton />
+            {/* <AddWordButton /> */}
         </>
     )
 }
