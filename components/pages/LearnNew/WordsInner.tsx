@@ -18,7 +18,7 @@ const WordsInner: React.FC<IWordsInnerProps> = ({ active }) => {
             dispatch(fetchNewWords({ active: active, token: token }))
         } else console.log("token is null");
 
-    }, [active])
+    }, [active, token])
 
     return (
         <div className="learn-new__words">

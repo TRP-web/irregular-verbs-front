@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { createSlice, current, PayloadAction } from "@reduxjs/toolkit"
 import { INewWord } from "../../model/newWord"
 import { fetchNewWords } from "./newWordsAction"
 
@@ -13,12 +13,27 @@ const initialState: IInitialState = {
     newWords: []
 }
 
-const newWordsSlice = createSlice({
+export const newWordsSlice = createSlice({
     name: "newWords",
     initialState,
     reducers: {
-        addWords(state, action: PayloadAction<INewWord[]>) {
+        addNewWords(state, action: PayloadAction<INewWord[]>) {
             state.newWords = action.payload
+        },
+        removeNewWord(state, action: PayloadAction<string>) {
+            const removeId = action.payload
+            console.log(current(state.newWords));
+            
+            const result = current(state.newWords).filter((newWord) => {
+                if (newWord._id === removeId) {
+                    console.log(false, newWord._id, removeId);
+
+                    return false // remove
+                } else return true // add
+            })
+            console.log(result);
+
+            state.newWords = result
         }
     },
     extraReducers: {

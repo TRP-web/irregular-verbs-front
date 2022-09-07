@@ -3,6 +3,7 @@ import RemoteImage from "next/future/image"
 import Link from 'next/link'
 import React from 'react'
 import { useAppSelector } from '../../store/hooks/redux'
+import SingIn from '../SingIn/SingIng'
 
 interface IHeaderProps {
     children: JSX.Element
@@ -14,12 +15,12 @@ const Header: React.FC<IHeaderProps> = ({ children }) => {
 
     return (
         <>
+            <SingIn />
             <header className='header'>
                 <div className="header__inner">
                     <nav className="menu">
                         <ul>
                             <li className="menu__list">
-                                {/* <NavLink to={"/"}>Words</NavLink> */}
                                 <Link href={"/"}>
                                     <a>Words</a>
                                 </Link>

@@ -16,7 +16,7 @@ export const wordSlice = createSlice({
     name: "myverb",
     initialState,
     reducers: {
-        remove(state, action: PayloadAction<string>) {
+        removeWord(state, action: PayloadAction<string>) {
             const result = current(state.words).filter((word) => {
                 if (word._id === action.payload) {
                     return false // удалить
@@ -24,13 +24,12 @@ export const wordSlice = createSlice({
             })
             state.words = result
         },
-        add(state, action: PayloadAction<IWord>) {
+        addWord(state, action: PayloadAction<IWord>) {
             state.words.push(action.payload)
         },
     },
     extraReducers: {
         [fetchWords.fulfilled.type]: (state, action: PayloadAction<IWord[]>) => {
-            console.log(action.payload)
             state.words = action.payload
             state.loading = false
         },

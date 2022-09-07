@@ -5,6 +5,7 @@ import { INewWord } from '../../../model/newWord'
 import { IWord } from '../../../model/Word'
 import { useAppDispatch, useAppSelector } from '../../../store/hooks/redux'
 import { wordSlice } from '../../../store/reducers/myWord'
+import { newWordsSlice } from '../../../store/reducers/newWords'
 import { fetchWords } from '../../../store/reducers/wordsAction'
 import { apiUrls, backUrl } from '../../../urls/urls'
 
@@ -17,7 +18,8 @@ const NewWord: React.FC<INewWordProps> = ({ newWord, index }) => {
     const [description, setDescription] = React.useState<boolean>(false)
     const { token } = useAppSelector(state => state.userReducer)
     const dispatch = useAppDispatch()
-    const { add } = wordSlice.actions
+    const { addWord } = wordSlice.actions
+    const { removeNewWord } = newWordsSlice.actions
 
     const addWordHandler = (newWrodArg: INewWord) => {
 
@@ -30,9 +32,9 @@ const NewWord: React.FC<INewWordProps> = ({ newWord, index }) => {
                     headers: { token: token }
                 }
             ).then(res => {
-                console.log(res.data);
-                
-                dispatch(add(res.data))
+                dispatch(addWord(res.data))
+                // make a test for reapeting the my word and the NewWrod
+                dispatch(removeNewWord(newWrodArg._id))
             })
         } else console.log("token is null");
     }

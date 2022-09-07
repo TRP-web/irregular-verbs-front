@@ -4,10 +4,7 @@ import React from 'react'
 import { IUser } from '../../model/User';
 import { useAppDispatch, useAppSelector } from '../../store/hooks/redux';
 import { userSlice } from '../../store/reducers/user';
-import { wrapper } from '../../store/store';
 import { apiUrls, backUrl } from '../../urls/urls';
-const { addUser, chengeLoad, addToken } = userSlice.actions
-
 
 
 const SingIn: React.FC = () => {
@@ -17,12 +14,6 @@ const SingIn: React.FC = () => {
 
     console.log(user, token);
 
-    // useGoogleOneTapLogin({
-    //     onSuccess: credentialResponse => {
-    //         console.log(credentialResponse);
-    //     },
-
-    // })
     const registrationSuccess = (res: any) => {
         const token = res.credential
         const url = `${backUrl}${apiUrls.login}`

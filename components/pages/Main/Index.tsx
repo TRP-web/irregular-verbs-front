@@ -64,7 +64,6 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <SingIn />
       <Header>
         <div className="verbs">
           <MyWords />
