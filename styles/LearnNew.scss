@@ -66,6 +66,10 @@
         border: 1px solid #F3F3F3;
     }
 
+    &__words{
+        min-height: 60vh;
+    }
+
     .new-word {
         display: flex;
         width: 98%;

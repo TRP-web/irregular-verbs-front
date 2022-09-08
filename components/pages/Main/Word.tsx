@@ -11,11 +11,11 @@ interface IVerpProp {
 const Word: React.FC<IVerpProp> = ({ word, index }) => {
     const dispatch = useAppDispatch()
     const token = useAppSelector(state => state.userReducer.token)
-    const { remove } = wordSlice.actions
+    const { removeWord } = wordSlice.actions
 
     const deleteHanler = (_id: string) => {
         if (token !== null) {
-            dispatch(remove(_id))
+            dispatch(removeWord(_id))
             const url = `${backUrl}${apiUrls.deleteWord}`
             const data = { deleteId: _id }
             axios.delete(url,
