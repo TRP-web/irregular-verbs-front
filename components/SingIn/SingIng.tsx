@@ -5,14 +5,12 @@ import { IUser } from '../../model/User';
 import { useAppDispatch, useAppSelector } from '../../store/hooks/redux';
 import { userSlice } from '../../store/reducers/user';
 import { apiUrls, backUrl } from '../../urls/urls';
-
-
+import { setCookie } from 'cookies-next';
 const SingIn: React.FC = () => {
     const { user, token, load } = useAppSelector(state => state.userReducer)
     const dispatch = useAppDispatch()
     const { addUser, chengeLoad, addToken } = userSlice.actions
-
-    console.log(user, token);
+    setCookie("test", "test cookie", { maxAge: 1000 * 60 * 60 * 24 })
 
     const registrationSuccess = (res: any) => {
         const token = res.credential
@@ -21,11 +19,15 @@ const SingIn: React.FC = () => {
             .then(res => {
                 const { _id, email, name, picture } = res.data
                 const userData: IUser = { _id, email, name, picture }
+                setCookie("token", token, { maxAge: 1000 * 60 * 60 * 24 })
+                setCookie("user", userData, { maxAge: 1000 * 60 * 60 * 24 })
+                console.log("set cookie")
                 dispatch(addToken(token))
                 dispatch(addUser(userData))
                 dispatch(chengeLoad(true))
             })
     }
+
 
     return (
         <>

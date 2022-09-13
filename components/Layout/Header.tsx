@@ -12,7 +12,7 @@ interface IHeaderProps {
 const Header: React.FC<IHeaderProps> = ({ children }) => {
 
     const picture = useAppSelector(state => state.userReducer.user.picture)
-
+        
     return (
         <>
             <SingIn />

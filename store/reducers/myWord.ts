@@ -35,6 +35,9 @@ export const wordSlice = createSlice({
         },
         [fetchWords.pending.type]: (state) => {
             state.loading = true
+        },
+        [fetchWords.rejected.type]: () => {
+            
         }
     }
 })

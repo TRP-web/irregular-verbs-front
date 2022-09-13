@@ -33,13 +33,12 @@ export const userSlice = createSlice({
         },
     },
     extraReducers: {
-        // [HYDRATE]: (state, action) => {
-        //     console.log(state, action)
-        //     return {
-        //         ...state,
-        //         ...action.payload.auth,
-        //     };
-        // },
+        [HYDRATE]: (state, action) => {
+            const payload = action.payload.userReducer
+            state.load = payload.load
+            state.token = payload.token
+            state.user = payload.user
+        },
     }
 
 

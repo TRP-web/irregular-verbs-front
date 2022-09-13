@@ -1,8 +1,6 @@
 import React from 'react'
 import Loading from '../../Loading/Loading'
-import { IWord } from '../../../model/Word'
 import { useAppDispatch, useAppSelector } from '../../../store/hooks/redux'
-import { wordSlice } from '../../../store/reducers/myWord'
 import Word from './Word'
 import { fetchWords } from '../../../store/reducers/wordsAction'
 
@@ -10,12 +8,17 @@ const ListVerbs: React.FC = () => {
     const { words, loading } = useAppSelector(state => state.vertReducer)
 
     const { token } = useAppSelector(state => state.userReducer)
+
     const dispatch = useAppDispatch()
 
     React.useEffect(() => {
         if (token !== null) {
+            console.log(token, "i am token")
+
             dispatch(fetchWords(token))
         } else console.log("token is null");
+
+
     }, [token])
 
     return (
