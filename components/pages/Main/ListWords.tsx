@@ -5,7 +5,7 @@ import Word from './Word'
 import { fetchWords } from '../../../store/reducers/wordsAction'
 
 const ListVerbs: React.FC = () => {
-    const { words, loading } = useAppSelector(state => state.vertReducer)
+    const { words, loading } = useAppSelector(state => state.wordsReducer)
 
     const { token } = useAppSelector(state => state.userReducer)
 
@@ -14,7 +14,6 @@ const ListVerbs: React.FC = () => {
     React.useEffect(() => {
         if (token !== null) {
             console.log(token, "i am token")
-
             dispatch(fetchWords(token))
         } else console.log("token is null");
 

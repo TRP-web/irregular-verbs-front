@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { createWrapper } from 'next-redux-wrapper'
-import vertReducer from "./reducers/myWord"
+import wordsReducer from "./reducers/myWord"
 import userReducer from "./reducers/user"
 import newWordsReducer from "./reducers/newWords"
 const rootReducer = combineReducers({
-    vertReducer,
+    wordsReducer,
     userReducer,
     newWordsReducer
 })

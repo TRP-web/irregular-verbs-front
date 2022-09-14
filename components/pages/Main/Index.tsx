@@ -64,11 +64,9 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Header>
-        <div className="verbs">
-          <MyWords />
-        </div>
-      </Header>
+      <div className="verbs">
+        <MyWords />
+      </div>
 
 
       {/* <input

@@ -1,0 +1,15 @@
+.test {
+    &__inputs-inner {
+        display: flex;
+
+        div+div {
+            margin-left: 40px;
+        }
+    }
+    
+    &__input-container {
+        span {
+            font-size: 20px;
+        }
+    }
+}
