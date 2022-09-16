@@ -1,0 +1,1 @@
+export type IWordsRadio = "5" | "50p" | "all"

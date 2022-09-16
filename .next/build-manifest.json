@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/tests.js"
+    ],
+    "/tests/[type]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tests/[type].js"
     ]
   },
   "ampFirstPages": []

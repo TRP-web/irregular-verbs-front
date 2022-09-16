@@ -1,15 +1,38 @@
 .test {
+    padding-top: 20px;
     &__inputs-inner {
         display: flex;
-
+        h2 {
+            margin-bottom: 40px;
+        }
         div+div {
             margin-left: 40px;
         }
     }
-    
+    &__inputs-inner {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
     &__input-container {
         span {
             font-size: 20px;
         }
+    }
+    a {
+        width: 160px;
+        height: 40px;
+        background-color: firebrick;
+        border: none;
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
     }
 }
