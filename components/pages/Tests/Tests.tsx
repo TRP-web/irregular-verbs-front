@@ -15,7 +15,6 @@ const Tests: React.FC = () => {
     const chengeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value: any = e.target.value
         setActiveRadio(value)
-        console.log(value)
     }
 
     React.useEffect(() => {
