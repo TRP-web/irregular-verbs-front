@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/tests.js"
     ],
-    "/tests/[type]": [
+    "/tests/[quantity]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tests/[type].js"
+      "static/chunks/pages/tests/[quantity].js"
     ]
   },
   "ampFirstPages": []
