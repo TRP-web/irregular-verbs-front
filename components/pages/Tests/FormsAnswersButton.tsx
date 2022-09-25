@@ -6,7 +6,7 @@ interface IFromsAnswersButtonProps {
     trueWords: IWord
     setFromsWord: React.Dispatch<React.SetStateAction<IFormsWordObj>>
     formsWord: IFormsWordObj
-    children: string
+    children: string | undefined
     setResult: React.Dispatch<React.SetStateAction<IResult>>
 }
 
@@ -69,13 +69,25 @@ const FromsAnswersButton: React.FC<IFromsAnswersButtonProps> = ({
         }
     }
 
+    React.useEffect(() => {
+        setError(false)
+        setCorrect(false)
+    }, [trueWords])
+
     return (
-        <div
-            className={`test-forms__answer ${error ? "error" : ""}${correct ? "active" : ""}`}
-            onClick={() => sendAnswerHandler(children, formsWord)}
-        >
-            {children}
-        </div>
+        <>
+            {
+                children !== undefined ?
+                    <div
+                        className={`test-forms__answer ${error ? "error" : ""}${correct ? "correct" : ""}`}
+                        onClick={() => sendAnswerHandler(children, formsWord)}
+                    >
+                        {children}
+                    </div>
+                    : null
+            }
+        </>
+
     )
 }
 export default FromsAnswersButton

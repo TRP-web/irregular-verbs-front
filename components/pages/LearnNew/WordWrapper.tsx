@@ -28,7 +28,21 @@ const WordWrapper: React.FC = () => {
                 </nav>
                 <div className="learn-new__content-inner">
                     <div className="learn-new__filter">
-                        i am future filter
+                        <span className="learn-new__index">
+                            №
+                        </span>
+                        <span className="learn-new__type">
+                            word
+                        </span>
+                        <span className="learn-new__type">
+                            v2
+                        </span>
+                        <span className="learn-new__type">
+                            v3
+                        </span>
+                        <span className="learn-new__type">
+                            translated
+                        </span>
                     </div>
                     <WordsInner active={activeList} />
                 </div>

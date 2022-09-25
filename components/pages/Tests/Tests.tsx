@@ -29,6 +29,7 @@ const Tests: React.FC = () => {
 
     return (
         <div className='test'>
+            <p className='test__text'>On this page you can will have started test, in order to saw your problem with new words and fix it</p>
             <h2>Choose quantity words for testing</h2>
             <div className="test__inputs-inner">
                 {
@@ -67,6 +68,8 @@ const Tests: React.FC = () => {
                     <span>all words({words.length})</span>
                 </div>
             </div>
+            <h2>Choose type of test which you want start</h2>
+
             <div className="test__inputs-inner">
                 <div className="test__input-container">
                     <input
@@ -89,6 +92,8 @@ const Tests: React.FC = () => {
                     <span>testing of form</span>
                 </div>
             </div>
+
+
             <Link href={`tests/${activeQuantityRadio}?type=${activeTypeRadio}`}>
                 <a>Start test words</a>
             </Link>

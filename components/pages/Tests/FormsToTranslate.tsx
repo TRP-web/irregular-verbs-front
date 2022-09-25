@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { useGetRandomArray } from '../../../hooks/useGetRandomArray'
 import { IWord } from '../../../model/Word'
+import Progres from '../../Progres/Progres'
 import RequestButton from './requestButton'
 
 interface IFormToTranslateProps {
@@ -97,11 +98,7 @@ const FormsToTranslate: React.FC<IFormToTranslateProps> = ({ randomWords }) => {
                     }
                 </div>
             </div>
-            <div className="test__progres" style={{
-                width: `${(stage + 1) / randomWords.length * 100}%`
-            }}>
-                {stage + 1}/{randomWords.length}
-            </div>
+          <Progres stage={stage} all={randomWords.length}/>
         </div>
     )
 }

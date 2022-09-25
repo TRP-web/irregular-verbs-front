@@ -11,6 +11,12 @@
     &__inner {
         width: 90vw;
         margin: 0 auto;
+        
+    }
+
+    &__index {
+        width: 5%;
+        padding-left: 40px;
     }
 
     &__menu {
@@ -57,16 +63,26 @@
     &__filter {
         background-color: $filterBack;
         width: 100%;
+        margin: 0 auto;
         height: 34px;
-        text-align: center;
         background-color: $verbBack;
+        display: flex;
+        align-items: center;
+        span {
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+    &__type {
+        width: 19%;
     }
 
     &__content-inner {
         border: 1px solid #F3F3F3;
     }
 
-    &__words{
+    &__words {
         min-height: 60vh;
     }
 
@@ -78,19 +94,21 @@
         align-items: center;
         margin-top: 11px;
         background-color: $verbBack;
+
         span {
             width: 19.4%;
             color: $black-light;
         }
-        
-        &__concat{
+
+        &__concat {
             width: 19.4%;
             display: flex;
             align-items: center;
         }
 
-        &__img{
+        &__img {
             cursor: pointer;
+
             &.active {
                 transform: rotate(180deg);
             }
@@ -101,7 +119,8 @@
             display: flex;
             justify-content: center;
         }
-        button{
+
+        button {
             background-color: #00C98D;
             border: none;
             padding: 7px 19px;
@@ -113,7 +132,8 @@
             margin-right: 10px;
 
         }
-        &__description{
+
+        &__description {
             width: 98%;
             margin: 0 auto;
             border: 1px dashed #D6D6D6;
