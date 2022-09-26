@@ -32,7 +32,7 @@ const Word: React.FC<IVerpProp> = ({ word, index }) => {
     return (
         <div className="verb" >
             <span className='verb__verb'>
-                <span className='verb__inedx'>{index}</span>{word.word}
+                <span className='verb__index'>{index}</span>{word.word}
             </span>
             <span className='verb__v2'>{word.v2}</span>
             <span className='verb__v3'>{word.v3}</span>

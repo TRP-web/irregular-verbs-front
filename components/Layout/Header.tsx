@@ -50,8 +50,8 @@ const Header: React.FC<IHeaderProps> = ({ children }) => {
                         {/* <img src={window.location.origin + "/img/logos.svg"} alt="logo" /> */}
                         <Image
                             src={"/img/logos.svg"}
-                            width={"150px"}
-                            height={"60px"}
+                            layout={"fill"}
+                            objectFit={"contain"}
                         />
                     </div>
                     <div className="profil__inner">

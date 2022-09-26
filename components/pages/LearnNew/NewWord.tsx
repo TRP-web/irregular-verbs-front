@@ -39,7 +39,7 @@ const NewWord: React.FC<INewWordProps> = ({ newWord, index }) => {
         } else console.log("token is null");
     }
 
-
+    console.log(window.screen.width)
 
     const descHandler = () => {
         setDescription(desc => !desc)
@@ -57,7 +57,12 @@ const NewWord: React.FC<INewWordProps> = ({ newWord, index }) => {
                     <button
                         onClick={() => addWordHandler(newWord)}
                         className="new-word__learn"
-                    >Learn new
+                    >
+                        {window.screen.width > 750 ?
+                            "Learn new"
+                            : "Add"
+                        }
+
                     </button>
                     <Image
                         className={`new-word__img ${description ? "active" : ""}`}

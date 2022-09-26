@@ -1,19 +1,30 @@
 .test {
     padding-top: 20px;
+
     &__text {
         text-align: center;
         padding: 0;
         font-size: 18px;
     }
+
     &__inputs-inner {
         display: flex;
 
         h2 {
             margin-bottom: 40px;
+
+            @media(max-width:480px) {
+                font-size: 20px;
+            }
         }
 
         div+div {
             margin-left: 40px;
+
+            @media(max-width:420px) {
+                margin-left: 0;
+                margin-top: 10px;
+            }
         }
     }
 
@@ -21,6 +32,11 @@
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
+
+        @media(max-width:420px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__input-container {
@@ -67,6 +83,10 @@
         border-bottom: 1px solid $listStrock;
         font-size: 22px;
 
+        @media(max-width:480px) {
+            font-size: 17px;
+        }
+
         span {
             span {
                 font-weight: 700;
@@ -75,6 +95,10 @@
 
         span+span {
             margin-left: 38px;
+
+            @media(max-width:480px) {
+                margin-left: 15px;
+            }
         }
     }
 
@@ -114,7 +138,7 @@
     &__charges {
         display: flex;
         height: 25px;
-        width: 900px;
+        max-width: 900px;
         margin: 0 auto;
 
         div {
@@ -163,34 +187,53 @@
         flex-direction: column;
         align-items: center;
     }
-    &__question-task{
+
+    &__question-task {
         font-size: 25px;
         font-weight: 700;
+
+        @media(max-width:480px) {
+            font-size: 22px;
+        }
     }
+
     &__questions {
         display: flex;
         justify-content: center;
         width: 100%;
+
         span+span {
             margin-left: 15px;
         }
-        span{
+
+        span {
             min-width: 10%;
             font-size: 22px;
+
+            @media(max-width:480px) {
+                font-size: 16px;
+            }
+
             strong {
                 font-size: 24px;
+
+                @media(max-width:480px) {
+                    font-size: 18px;
+                }
             }
         }
     }
+
     &__answers-inner {
         max-width: 900px;
-        width: 100%;
+        min-width: 100%;
         display: flex;
         flex-wrap: wrap;
         border: 1px solid $listStrock;
         justify-content: center;
         cursor: pointer;
         padding: 10px 0;
+
         div {
             padding: 10px;
             font-size: 20px;
@@ -198,12 +241,15 @@
             line-height: 1;
             border-radius: 3px;
         }
-        div + div {
+
+        div+div {
             margin-left: 15px;
         }
+
         div.error {
             background-color: rgb(223, 45, 0);
         }
+
         div.correct {
             background-color: rgb(17, 183, 114);
         }

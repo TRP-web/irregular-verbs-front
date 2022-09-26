@@ -7,7 +7,7 @@ import { fetchWords } from '../../../store/reducers/wordsAction'
 const Tests: React.FC = () => {
     const { words } = useAppSelector(state => state.wordsReducer)
     const { token } = useAppSelector(state => state.userReducer)
-    const [activeQuantityRadio, setActiveRadio] = React.useState<IQuantityRadio>(IQuantityRadioValue.five)
+    const [activeQuantityRadio, setActiveRadio] = React.useState<IQuantityRadio>(IQuantityRadioValue.all)
     const dispatch = useAppDispatch()
     const [activeTypeRadio, setActiveTypeRadio] = React.useState<ITypeRadio>(ITypeRadioValue.translate)
 
