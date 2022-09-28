@@ -3,7 +3,7 @@ import { IActiveList } from '../../../model/activeList'
 import { useAppDispatch, useAppSelector } from '../../../store/hooks/redux'
 import { fetchNewWords } from '../../../store/reducers/newWordsAction'
 import Loading from '../../Loading/Loading'
-import NewWord from './newWord'
+import NewWord from './NewWord'
 
 interface IWordsInnerProps {
     active: IActiveList
