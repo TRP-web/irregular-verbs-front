@@ -1,5 +1,5 @@
 import React from "react"
-import Index from "../components/pages/Main/index"
+import Index from "../components/pages/Main/Index"
 import { userSlice } from "../store/reducers/user";
 import { wrapper } from "../store/store";
 import { getCookies } from 'cookies-next';

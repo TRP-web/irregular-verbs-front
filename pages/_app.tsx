@@ -2,7 +2,7 @@ import { Provider } from "react-redux";
 import { setupStore, wrapper } from "../store/store";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import React from "react";
-import "../index.scss"
+import "../Index.scss"
 import Header from "../components/Layout/Header";
 
 const App = ({ Component, pageProps }) => {

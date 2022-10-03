@@ -4,7 +4,7 @@ import { useGetRandomArray } from '../../../hooks/useGetRandomArray'
 import { IWord } from '../../../model/Word'
 import { IQuantityRadioValue, IQuantityRadio, ITypeRadioValue } from '../../../model/WordsRadio'
 import { useAppSelector } from '../../../store/hooks/redux'
-import FormsToTranslate from './formsToTranslate'
+import FormsToTranslate from './FormsToTranslate'
 import WordsToForms from './WordsToForms'
 
 const Start: React.FC = () => {
