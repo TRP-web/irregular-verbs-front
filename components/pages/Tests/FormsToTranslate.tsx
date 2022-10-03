@@ -3,7 +3,7 @@ import React from 'react'
 import { useGetRandomArray } from '../../../hooks/useGetRandomArray'
 import { IWord } from '../../../model/Word'
 import Progres from '../../Progres/Progres'
-import RequestButton from './requestButton'
+import RequestButton from './RequestButton'
 
 interface IFormToTranslateProps {
     randomWords: IWord[]
