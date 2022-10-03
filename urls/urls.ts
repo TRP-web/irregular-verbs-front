@@ -1,4 +1,4 @@
-export const backUrl = "http://localhost:22008/"
+export const backUrl = "https://214024.fornex.cloud:22008/"
 
 export const apiUrls = {
     login: "user/registration",
