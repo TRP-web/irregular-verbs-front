@@ -1,7 +1,6 @@
 import React from 'react'
 import { IWord } from '../../../model/Word'
-import result from '../../../pages/tests/result/[...result]'
-import { IResult } from './formsToTranslate'
+import { IResult } from './FormsToTranslate'
 
 interface IRequestButtonProps {
     trueWord: IWord
