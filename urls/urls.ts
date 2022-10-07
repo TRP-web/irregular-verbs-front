@@ -1,4 +1,4 @@
-export const backUrl = "https://31.172.75.19:22008/"
+export const backUrl = "https://trp-web.com:22008/test"
 
 export const apiUrls = {
     login: "user/registration",
