@@ -1,4 +1,4 @@
-export const backUrl = "http://31.172.75.19:22008/"
+export const backUrl = "https://31.172.75.19:22008/"
 
 export const apiUrls = {
     login: "user/registration",
