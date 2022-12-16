@@ -8,6 +8,7 @@ import { wordSlice } from '../../../store/reducers/myWord'
 import { newWordsSlice } from '../../../store/reducers/newWords'
 import { fetchWords } from '../../../store/reducers/wordsAction'
 import { apiUrls, backUrl } from '../../../urls/urls'
+import AudioOfWord from '../../AudioOfWord/AudioOfWord'
 
 interface INewWordProps {
     newWord: INewWord
@@ -49,9 +50,18 @@ const NewWord: React.FC<INewWordProps> = ({ newWord, index }) => {
         <>
             <div className="new-word">
                 <span className="new-word__index">{index + 1}</span>
-                <span className="new-word__word">{newWord.word}</span>
-                <span className="new-word__v2">{newWord.v2}</span>
-                <span className="new-word__v3">{newWord.v3}</span>
+                <span className="new-word__word">
+                    {newWord.word}
+                    <AudioOfWord word={newWord.word} />
+                </span>
+                <span className="new-word__v2">
+                    {newWord.v2}
+                    <AudioOfWord word={newWord.v2} />
+                </span>
+                <span className="new-word__v3">
+                    {newWord.v3}
+                    <AudioOfWord word={newWord.v3} />
+                </span>
                 <span className="new-word__translated">{newWord.translated}</span>
                 <div className="new-word__concat">
                     <button

@@ -114,6 +114,12 @@
         span {
             width: 19.4%;
             color: $black-light;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                margin-left: 5px;
+            }
             @media(max-width:480px) {
                 font-size: 14px;
                 text-align: center;
