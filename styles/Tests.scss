@@ -82,12 +82,14 @@
         align-items: center;
         border-bottom: 1px solid $listStrock;
         font-size: 22px;
-
+        
         @media(max-width:480px) {
             font-size: 17px;
         }
 
         span {
+            display: flex;
+            align-items: center;
             span {
                 font-weight: 700;
             }

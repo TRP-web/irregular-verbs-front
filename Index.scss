@@ -7,6 +7,19 @@ body {
   margin: 0;
 }
 
+@mixin next-img($width, $height) {
+  position: relative;
+  z-index: 1;
+  width: $width;
+
+  @if $height != 0 {
+    height: $height;
+  }
+
+  span {
+    overflow: auto
+  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 $black: #000;

@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { useGetRandomArray } from '../../../hooks/useGetRandomArray'
 import { IWord } from '../../../model/Word'
+import AudioOfWord from '../../AudioOfWord/AudioOfWord'
 import Progres from '../../Progres/Progres'
 import RequestButton from './RequestButton'
 
@@ -68,13 +69,17 @@ const FormsToTranslate: React.FC<IFormToTranslateProps> = ({ randomWords }) => {
                     trueWord !== undefined ?
                         <div className="test__question">
                             <span className="test__verb">
-                                word: <span>{trueWord.word}</span>
+                                word: <span>{trueWord.word} </span>
+                                <AudioOfWord word={trueWord.word} style={{ marginLeft: "5px" }} />
                             </span>
                             <span className="test__v2">
-                                v2: <span>{trueWord.v2}</span>
+                                v2: <span>{trueWord.v2} </span>
+                                <AudioOfWord word={trueWord.v2} style={{ marginLeft: "5px" }} />
+
                             </span>
                             <span className="test__v3">
-                                v3: <span>{trueWord.v3}</span>
+                                v3: <span>{trueWord.v3} </span>
+                                <AudioOfWord word={trueWord.v3} style={{ marginLeft: "5px" }} />
                             </span>
                         </div>
 
@@ -98,7 +103,7 @@ const FormsToTranslate: React.FC<IFormToTranslateProps> = ({ randomWords }) => {
                     }
                 </div>
             </div>
-          <Progres stage={stage} all={randomWords.length}/>
+            <Progres stage={stage} all={randomWords.length} />
         </div>
     )
 }

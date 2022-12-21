@@ -23,19 +23,18 @@ const NewWord: React.FC<INewWordProps> = ({ newWord, index }) => {
     const { removeNewWord } = newWordsSlice.actions
 
     const addWordHandler = (newWrodArg: INewWord) => {
-
+        console.log(newWrodArg)
         const url = `${backUrl}${apiUrls.addWord}`
-        const { translated, v2, v3, word } = newWrodArg
-        const data = { translated, v2, v3, word }
+        const { _id, translated, v2, v3, word, description, example, statistics } = newWrodArg
+        const data: INewWord = { _id, translated, v2, v3, word, description, example, statistics }
         if (token !== null) {
+            dispatch(removeNewWord(newWrodArg._id))
             axios.post<IWord>(url, { data: data },
                 {
                     headers: { token: token }
                 }
             ).then(res => {
                 dispatch(addWord(res.data))
-                // make a test for reapeting the my word and the NewWrod
-                dispatch(removeNewWord(newWrodArg._id))
             })
         } else console.log("token is null");
     }

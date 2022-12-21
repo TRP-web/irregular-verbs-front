@@ -14,7 +14,7 @@ const playAudio = (word: string,) => {
 const AudioOfWord: React.FC<IAudioOfWordProps> = ({ word, style }) => {
 
     return (
-        <div className='audio-word' onClick={() => playAudio(word)} style={style}>
+        <div className='audio-word' onClick={(e) => {e.preventDefault(); playAudio(word)}} style={style}>
             <Image
                 src={"/img/audio2.svg"}
                 layout={"fill"}

@@ -29,6 +29,8 @@ const FromsAnswersButton: React.FC<IFromsAnswersButtonProps> = ({
                     result.correct += 1
                     return result
                 })
+                const audioObj = new Audio(`https://wooordhunt.ru/data/sound/sow/us/${value}.mp3`)
+                audioObj.play()
             } else {
                 setResult(current => {
                     const result = { ...current }
@@ -54,7 +56,8 @@ const FromsAnswersButton: React.FC<IFromsAnswersButtonProps> = ({
                     result.correct += 1
                     return result
                 })
-
+                const audioObj = new Audio(`https://wooordhunt.ru/data/sound/sow/us/${value}.mp3`)
+                audioObj.play()
             } else {
                 setResult(current => {
                     const result = { ...current }
