@@ -75,7 +75,7 @@ const Word: React.FC<IVerpProp> = ({ word, index, visebleWord }) => {
                             : null
                     }
                 </span>
-                <span className='verb__translated'>
+                {/* <span className='verb__translated'>
                     {
                         visebleWord.translated === true ?
                             <>
@@ -83,7 +83,7 @@ const Word: React.FC<IVerpProp> = ({ word, index, visebleWord }) => {
                             </>
                             : null
                     }
-                </span>
+                </span> */}
                 <div className='verb__button-inner'>
                     <div
                         className="verb__info"

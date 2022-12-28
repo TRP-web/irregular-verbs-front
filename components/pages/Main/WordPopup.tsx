@@ -13,10 +13,11 @@ const WordPopup: React.FC<IWordPopupProps> = ({ setStatusPopup, word }) => {
         const result = Math.round(number / count * 100)
         return result
     }
-    const sTrue = 1//word.statistics[0]
-    const sFalse = 1//word.statistics[1]
+    const sTrue = word.statistics[0]// = 1
+    const sFalse = word.statistics[1]// = 1
     const sTrueProcent = getPercentage(sTrue + sFalse, sTrue)
     const sFalseProcent = getPercentage(sTrue + sFalse, sFalse)
+
 
     return (
         <div
@@ -54,8 +55,8 @@ const WordPopup: React.FC<IWordPopupProps> = ({ setStatusPopup, word }) => {
                                 word={word.word}
                                 style={{
                                     marginTop: "10px",
-                                    width: "40px",
-                                    height: "40px"
+                                    width: "37px",
+                                    height: "37px"
                                 }}
                             />
                         </div>
@@ -65,8 +66,8 @@ const WordPopup: React.FC<IWordPopupProps> = ({ setStatusPopup, word }) => {
                                 word={word.v2}
                                 style={{
                                     marginTop: "10px",
-                                    width: "40px",
-                                    height: "40px"
+                                    width: "37px",
+                                    height: "37px"
                                 }}
                             />
                         </div>
@@ -87,20 +88,27 @@ const WordPopup: React.FC<IWordPopupProps> = ({ setStatusPopup, word }) => {
                         <strong>{word.translated}</strong>
                     </div>
                     <div className="verb-popup__history">
-                        <div
-                            style={{
-                                width: `${sTrueProcent}%`
-                            }}
-                        >
-                            {sTrueProcent}%
-                        </div>
-                        <div
-                            style={{
-                                width: `${sFalseProcent}%`
-                            }}
-                        >
-                            {sFalseProcent}%
-                        </div>
+                        {
+                            sTrue > 0 && sFalse > 0 ?
+                                <>
+                                    <div
+                                        style={{
+                                            width: `${sTrueProcent}%`
+                                        }}
+                                    >
+                                        {sTrueProcent}%
+                                    </div>
+                                    <div
+                                        style={{
+                                            width: `${sFalseProcent}%`
+                                        }}
+                                    >
+                                        {sFalseProcent}%
+                                    </div>
+                                </>
+                                : <span>You never have a test with this word</span>
+                        }
+
                     </div>
                     <div className="verb-popup__description">
                         <strong>description:</strong>
@@ -111,7 +119,7 @@ const WordPopup: React.FC<IWordPopupProps> = ({ setStatusPopup, word }) => {
                         {
                             word.example.map((exampel, index) => {
                                 return (
-                                    <span>
+                                    <span key={index}>
                                         {` ${index + 1}. ${exampel}.`}
                                     </span>
                                 )

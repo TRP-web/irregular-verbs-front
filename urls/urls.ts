@@ -9,6 +9,7 @@ export const apiUrls = {
     addWord: "words/add",
     getWords: "words/receive",
     deleteWord: "words/delete",
-    getNewWords: "new-words/"
+    getNewWords: "new-words/",
+    updateStatistics:"words/update-statistics"
 }
 

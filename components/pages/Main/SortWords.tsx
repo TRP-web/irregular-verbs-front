@@ -63,7 +63,7 @@ const SortWords: React.FC = () => {
                         }
                     </div>
                 </span>
-                <span className="verbs__type">
+                {/* <span className="verbs__type">
                     translated <div
                         className="verbs__eye"
                         onClick={() => visebleChangeHandler("translated")}
@@ -74,7 +74,7 @@ const SortWords: React.FC = () => {
                                 : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
                         }
                     </div>
-                </span>
+                </span> */}
                 <div className="verbs__typet">
                 </div>
             </div>
