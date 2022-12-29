@@ -16,7 +16,6 @@ const SortWords: React.FC = () => {
         result[value] = !visebleWord[value]
         setVisebleWord({ ...result })
         setCookie("visebleWord", result)
-        console.log(getCookie("visebleWord"))
     }
     React.useEffect(() => {
         const cookie: any = getCookie("visebleWord")
@@ -27,7 +26,7 @@ const SortWords: React.FC = () => {
         <div className='verbs__inner'>
             <div className="verbs__filter">
 
-                <span className="verbs__type">
+                {/* <span className="verbs__type">
                     № word <div
                         className="verbs__eye"
                         onClick={() => visebleChangeHandler("word")}
@@ -62,7 +61,7 @@ const SortWords: React.FC = () => {
                                 : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
                         }
                     </div>
-                </span>
+                </span> */}
                 {/* <span className="verbs__type">
                     translated <div
                         className="verbs__eye"
@@ -76,6 +75,7 @@ const SortWords: React.FC = () => {
                     </div>
                 </span> */}
                 <div className="verbs__typet">
+                    test
                 </div>
             </div>
             {/* ..... */}
