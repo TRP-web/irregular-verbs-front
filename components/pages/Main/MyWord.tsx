@@ -8,7 +8,7 @@ const MyWords: React.FC = () => {
     return (
         <>
             <h2>My Verbs</h2>
-            {/* <SortWord /> */}
+            <SortWord />
             {/* <AddWordButton /> */}
         </>
     )
