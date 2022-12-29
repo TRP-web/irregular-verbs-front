@@ -41,7 +41,8 @@ export const getServerSideProps = wrapper.getServerSideProps((store) =>
   })
 
 const index: React.FC = () => {
-  return <Index />
+  // return <Index />
+  return <div>test</div>
 }
 
 export default index

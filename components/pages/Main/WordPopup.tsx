@@ -32,8 +32,8 @@ const WordPopup: React.FC<IWordPopupProps> = ({ setStatusPopup, word }) => {
                     <div className="verb-popup__logo">
                         <Image
                             src={"/img/info.svg"}
-                            layout={"fill"}
-                            objectFit={"contain"}
+                            // layout={"fill"}
+                            // objectFit={"contain"}
                         />
                     </div>
                     <div

@@ -1,11 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/tests": "pages/tests.js",
-  "/learn-new": "pages/learn-new.js",
-  "/tests/[quantity]": "pages/tests/[quantity].js",
-  "/": "pages/index.js",
-  "/tests/result/[...result]": "pages/tests/result/[...result].js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js"
 }
