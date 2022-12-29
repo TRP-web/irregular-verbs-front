@@ -8,11 +8,11 @@ import Header from "../components/Layout/Header";
 const App = ({ Component, pageProps }) => {
     return (
         // <Provider store={setupStore()}>
-        <GoogleOAuthProvider clientId='297750495683-im2hja8uvhhopfjp3rl0g0plkdplvoqf.apps.googleusercontent.com'>
+        // <GoogleOAuthProvider clientId='297750495683-im2hja8uvhhopfjp3rl0g0plkdplvoqf.apps.googleusercontent.com'>
             <Header>
                 <Component {...pageProps} />
             </Header>
-        </GoogleOAuthProvider>
+        /* </GoogleOAuthProvider> */
         /* </Provider> */
     )
 }
