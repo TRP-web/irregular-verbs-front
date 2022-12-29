@@ -79,13 +79,11 @@ const SortWords: React.FC = () => {
                     </div>
                 </span> */}
                 <div className="verbs__typet">
-                    test
                 </div>
             </div>
-            {/* ..... */}
-            {/* <VisualContext.Provider value={visebleWord}>
+            <VisualContext.Provider value={visebleWord}>
                 <ListWords />
-            </VisualContext.Provider> */}
+            </VisualContext.Provider>
         </div>
     )
 }
