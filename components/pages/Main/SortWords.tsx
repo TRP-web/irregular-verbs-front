@@ -23,66 +23,67 @@ const SortWords: React.FC = () => {
         setVisebleWord(visebleCookieObj)
     }, [])
     return (
-        <div className='verbs__inner'>
-            <div className="verbs__filter">
+        // <div className='verbs__inner'>
+        //     <div className="verbs__filter">
 
-                {/* <span className="verbs__type">
-                    № word <div
-                        className="verbs__eye"
-                        onClick={() => visebleChangeHandler("word")}
-                    >
-                        {
-                            visebleWord.word
-                                ? <Image src={"/img/open-eye.svg"} layout={"fill"} objectFit={"contain"} />
-                                : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
-                        }
-                    </div>
-                </span>
-                <span className="verbs__type">
-                    V2 <div
-                        className="verbs__eye"
-                        onClick={() => visebleChangeHandler("v2")}
-                    >
-                        {
-                            visebleWord.v2
-                                ? <Image src={"/img/open-eye.svg"} layout={"fill"} objectFit={"contain"} />
-                                : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
-                        }
-                    </div>
-                </span>
-                <span className="verbs__type">
-                    V3 <div
-                        className="verbs__eye"
-                        onClick={() => visebleChangeHandler("v3")}
-                    >
-                        {
-                            visebleWord.v3
-                                ? <Image src={"/img/open-eye.svg"} layout={"fill"} objectFit={"contain"} />
-                                : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
-                        }
-                    </div>
-                </span> */}
-                {/* <span className="verbs__type">
-                    translated <div
-                        className="verbs__eye"
-                        onClick={() => visebleChangeHandler("translated")}
-                    >
-                        {
-                            visebleWord.translated
-                                ? <Image src={"/img/open-eye.svg"} layout={"fill"} objectFit={"contain"} />
-                                : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
-                        }
-                    </div>
-                </span> */}
-                <div className="verbs__typet">
-                    test
-                </div>
-            </div>
-            {/* ..... */}
-            {/* <VisualContext.Provider value={visebleWord}>
-                <ListWords />
-            </VisualContext.Provider> */}
-        </div>
+        //         {/* <span className="verbs__type">
+        //             № word <div
+        //                 className="verbs__eye"
+        //                 onClick={() => visebleChangeHandler("word")}
+        //             >
+        //                 {
+        //                     visebleWord.word
+        //                         ? <Image src={"/img/open-eye.svg"} layout={"fill"} objectFit={"contain"} />
+        //                         : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
+        //                 }
+        //             </div>
+        //         </span>
+        //         <span className="verbs__type">
+        //             V2 <div
+        //                 className="verbs__eye"
+        //                 onClick={() => visebleChangeHandler("v2")}
+        //             >
+        //                 {
+        //                     visebleWord.v2
+        //                         ? <Image src={"/img/open-eye.svg"} layout={"fill"} objectFit={"contain"} />
+        //                         : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
+        //                 }
+        //             </div>
+        //         </span>
+        //         <span className="verbs__type">
+        //             V3 <div
+        //                 className="verbs__eye"
+        //                 onClick={() => visebleChangeHandler("v3")}
+        //             >
+        //                 {
+        //                     visebleWord.v3
+        //                         ? <Image src={"/img/open-eye.svg"} layout={"fill"} objectFit={"contain"} />
+        //                         : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
+        //                 }
+        //             </div>
+        //         </span> */}
+        //         {/* <span className="verbs__type">
+        //             translated <div
+        //                 className="verbs__eye"
+        //                 onClick={() => visebleChangeHandler("translated")}
+        //             >
+        //                 {
+        //                     visebleWord.translated
+        //                         ? <Image src={"/img/open-eye.svg"} layout={"fill"} objectFit={"contain"} />
+        //                         : <Image src={"/img/close-eye.svg"} layout={"fill"} objectFit={"contain"} />
+        //                 }
+        //             </div>
+        //         </span> */}
+        //         <div className="verbs__typet">
+        //             test
+        //         </div>
+        //     </div>
+        //     {/* ..... */}
+        //     {/* <VisualContext.Provider value={visebleWord}>
+        //         <ListWords />
+        //     </VisualContext.Provider> */}
+        // </div>
+        <div>test</div>
     )
 }
 export default SortWords
