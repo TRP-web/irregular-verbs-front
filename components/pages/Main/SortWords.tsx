@@ -1,4 +1,4 @@
-import { setCookie, getCookie } from 'cookies-next'
+import { setCookie, getCookie, hasCookie } from 'cookies-next'
 import Image from 'next/image'
 import React from 'react'
 import { IVisibleWord } from '../../../model/visibleWord'
@@ -17,11 +17,15 @@ const SortWords: React.FC = () => {
         setVisebleWord({ ...result })
         setCookie("visebleWord", result)
     }
-    // React.useEffect(() => {
-    //     const cookie: any = getCookie("visebleWord")
-    //     const visebleCookieObj = JSON.parse(cookie)
-    //     setVisebleWord(visebleCookieObj)
-    // }, [])
+    React.useEffect(() => {
+        const isVisebleWord = hasCookie("visebleWord")
+        if (isVisebleWord) {
+            const cookie: any = getCookie("visebleWord")
+            const visebleCookieObj = JSON.parse(cookie)
+            setVisebleWord(visebleCookieObj)
+        }
+
+    }, [])
     return (
         // <div className='verbs__inner'>
         //     <div className="verbs__filter">
