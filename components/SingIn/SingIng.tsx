@@ -37,7 +37,7 @@ const SingIn: React.FC = () => {
                         <div className="registration__inner">
                             <h2>Login/Registration</h2>
                             <p> <strong>Click</strong> on the button at the bottom for login or registration in application</p>
-                            {/* <div className="registration__google-inner">
+                            <div className="registration__google-inner">
                                 <GoogleLogin
                                     onSuccess={registrationSuccess}
                                     onError={() => {
@@ -50,7 +50,7 @@ const SingIn: React.FC = () => {
                                     useOneTap
                                 />
 
-                            </div> */}
+                            </div>
 
                         </div>
                     </div>
