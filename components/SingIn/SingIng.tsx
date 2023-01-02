@@ -37,7 +37,6 @@ const SingIn: React.FC = () => {
                             <h2>Login/Registration</h2>
                             <p> <strong>Click</strong> on the button at the bottom for login or registration in application</p>
                             <div className="registration__google-inner">
-
                                 <GoogleLogin
                                     onSuccess={registrationSuccess}
                                     onError={() => {
@@ -47,7 +46,7 @@ const SingIn: React.FC = () => {
                                     theme={'filled_blue'}
                                     type={'standard'}
                                     width={
-                                        window.innerWidth > 541
+                                        window.screen.width > 541
                                             ? "540px"
                                             : "310px"
                                     }
