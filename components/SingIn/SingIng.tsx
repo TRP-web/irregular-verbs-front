@@ -37,33 +37,17 @@ const SingIn: React.FC = () => {
                             <h2>Login/Registration</h2>
                             <p> <strong>Click</strong> on the button at the bottom for login or registration in application</p>
                             <div className="registration__google-inner">
-                                {
-                                    window.innerWidth > 541
-                                        ? <GoogleLogin
-                                            onSuccess={registrationSuccess}
-                                            onError={() => {
-                                                console.log('Login Failed');
-                                            }}
-                                            size={'large'}
-                                            theme={'filled_blue'}
-                                            type={'standard'}
-                                            width={"540px"}
-                                            useOneTap
-                                        />
-                                        : <GoogleLogin
-                                            onSuccess={registrationSuccess}
-                                            onError={() => {
-                                                console.log('Login Failed');
-                                            }}
-                                            size={'large'}
-                                            theme={'filled_blue'}
-                                            type={'standard'}
-                                            width={"310px"}
-                                            useOneTap
-                                        />
-                                }
-
-
+                                <GoogleLogin
+                                    onSuccess={registrationSuccess}
+                                    onError={() => {
+                                        console.log('Login Failed');
+                                    }}
+                                    size={'large'}
+                                    theme={'filled_blue'}
+                                    type={'standard'}
+                                    width={"310px"}
+                                    useOneTap
+                                />
                             </div>
                         </div>
                     </div>
