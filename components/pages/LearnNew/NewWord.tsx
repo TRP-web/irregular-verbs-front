@@ -39,8 +39,6 @@ const NewWord: React.FC<INewWordProps> = ({ newWord, index }) => {
         } else console.log("token is null");
     }
 
-    console.log(window.screen.width)
-
     const descHandler = () => {
         setDescription(desc => !desc)
     }

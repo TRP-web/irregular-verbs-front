@@ -27,10 +27,7 @@ const SingIn: React.FC = () => {
                 dispatch(chengeLoad(true))
             })
     }
-    setTimeout(() => {
-        console.log(window.innerWidth)
-    })
-
+    
     return (
         <>
             {
@@ -56,20 +53,12 @@ const SingIn: React.FC = () => {
                                     }
                                     useOneTap
                                 />
-
-
-
-
-
                             </div>
-
                         </div>
                     </div>
                     : null
             }
-
         </>
-
     )
 }
 
