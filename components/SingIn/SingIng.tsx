@@ -27,7 +27,9 @@ const SingIn: React.FC = () => {
                 dispatch(chengeLoad(true))
             })
     }
-
+    setTimeout(() => {
+        console.log(window.innerWidth)
+    })
 
     return (
         <>
@@ -38,6 +40,7 @@ const SingIn: React.FC = () => {
                             <h2>Login/Registration</h2>
                             <p> <strong>Click</strong> on the button at the bottom for login or registration in application</p>
                             <div className="registration__google-inner">
+
                                 <GoogleLogin
                                     onSuccess={registrationSuccess}
                                     onError={() => {
@@ -46,9 +49,17 @@ const SingIn: React.FC = () => {
                                     size={'large'}
                                     theme={'filled_blue'}
                                     type={'standard'}
-                                    width={"540px"}
+                                    width={
+                                        window.innerWidth > 541
+                                            ? "540px"
+                                            : "310px"
+                                    }
                                     useOneTap
                                 />
+
+
+
+
 
                             </div>
 

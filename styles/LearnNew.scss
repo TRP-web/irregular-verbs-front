@@ -1,11 +1,20 @@
 .learn-new {
     padding-top: 50px;
 
+    @media(max-width:480px) {
+        padding-top: 25px;
+    }
+
     h2 {
         color: $black;
         font-size: 32px;
         margin: 0;
         margin-bottom: 50px;
+
+        @media(max-width:480px) {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
     }
 
     &__inner {
@@ -110,34 +119,39 @@
         align-items: center;
         margin-top: 11px;
         background-color: $verbBack;
-        
+
         span {
             width: 19.4%;
             color: $black-light;
             display: flex;
             justify-content: center;
             align-items: center;
+
             div {
                 margin-left: 5px;
             }
+
             @media(max-width:480px) {
                 font-size: 14px;
                 text-align: center;
             }
-            
+
         }
 
         &__concat {
             width: 19.4%;
             display: flex;
             align-items: center;
+
             span {
                 @media(max-width:1000px) {
                     display: none !important;
                 }
             }
+
             @media(max-width:480px) {
                 margin-left: 20px;
+                width: 18%;
             }
         }
 
@@ -147,6 +161,7 @@
             &.active {
                 transform: rotate(180deg);
             }
+
             @media(max-width:1000px) {
                 display: none !important;
             }
@@ -158,13 +173,19 @@
             justify-content: center;
 
             @media(max-width:1000px) {
-                display: none;
+                display: none !important;
             }
         }
 
         &__word {
             @media(max-width:1000px) {
                 padding-left: 3px;
+            }
+        }
+
+        &__translated {
+            @media (max-width:480px) {
+                font-size: 12px;
             }
         }
 
@@ -178,11 +199,13 @@
             font-weight: 500;
             cursor: pointer;
             margin-right: 10px;
-            @media(max-width:480px){
+
+            @media(max-width:480px) {
                 font-size: 14px;
                 padding: 3px 8px;
+                margin-right: 0;
             }
-         
+
         }
 
         &__description {
