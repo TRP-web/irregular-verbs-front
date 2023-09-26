@@ -4,9 +4,9 @@
 ## This project use
 - React
 - Typescript
-- mongoose
-- mongoDB
-- jwt
+- NextJS
+- Redux(toolkit)
+- axios
 
 
 [Check the app](https://pages.github.com/](https://irregular-verbs-front-trp-web.vercel.app/))
