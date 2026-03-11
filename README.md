@@ -1,21 +1,50 @@
-# front-end of application that can help you to learn irregular verbs
+# Irregular Verbs Frontend
 
+Frontend application for learning English irregular verbs.
 
-## This project use
+This project provides a simple interface for building a personal list of irregular verbs, learning recommended verbs, and practicing through tests.
+
+## Live Demo
+
+- App: https://prontodev.dev/portfolio/irr-verbs
+
+b
+
+## Features
+
+- Google-based login/registration
+- Personal irregular verbs list
+- Recommended verbs to learn
+- Practice and testing pages
+- Audio support for words
+- Server-side auth state restore with cookies
+- State management with Redux Toolkit
+
+## Tech Stack
+
+- Next.js
 - React
-- Typescript
-- NextJS
-- Redux(toolkit)
-- axios
+- TypeScript
+- Redux Toolkit
+- next-redux-wrapper
+- Axios
+- SCSS / Sass
+- Google OAuth
 
+## Project Structure
 
-[Check the app](https://pages.github.com/](https://irregular-verbs-front-trp-web.vercel.app/))
-
-### About application 
-This applocation realy helped me when i was beginer in eanglish.
-registration is easy, just use your gmail account. 
-
-
-At the page "[Learn new](https://pages.github.com/](https://irregular-verbs-front-trp-web.vercel.app/learn-new))" you may find new words for your word list. 
-Then you can test your self at the page "[Tests](https://pages.github.com/](https://irregular-verbs-front-trp-web.vercel.app/tests))".
-Audio of words is avalible!
+```bash
+irregular-verbs-front/
+│
+├── components/
+├── hooks/
+├── model/
+├── pages/
+├── public/
+├── store/
+├── styles/
+├── urls/
+├── Index.scss
+├── next.config.js
+├── package.json
+└── tsconfig.json
