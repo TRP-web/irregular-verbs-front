@@ -8,7 +8,7 @@ This project provides a simple interface for building a personal list of irregul
 
 - App: https://prontodev.dev/portfolio/irr-verbs
 
-b
+- Back-end: https://github.com/TRP-web/irregular-verbs-back.git
 
 ## Features
 
